@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f4f6fc" />
+  <title>RedJr Builders and Construction Supply</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="loginView" class="login-screen">
+    <section class="login-brand">
+      <div class="brand-lockup">
+        <div class="brand-mark">RJ</div>
+        <div><h1>RedJr Builders and<br>Construction Supply</h1><p>Quality Materials. Stronger Builds.</p></div>
+      </div>
+      <div class="building-art" aria-hidden="true">
+        <div class="helmet"></div><div class="brick brick-one"></div><div class="brick brick-two"></div>
+        <div class="tool tool-one"></div><div class="tool tool-two"></div>
+      </div>
+      <p class="brand-caption">For a Better Tomorrow.</p>
+    </section>
+    <section class="login-card">
+      <div class="mini-mark">RJ</div>
+      <h2>Welcome Back!</h2>
+      <p class="muted">Please log in to your account.</p>
+      <form id="loginForm">
+        <label for="username">Username</label>
+        <input id="username" autocomplete="username" placeholder="Enter your username" required />
+        <label for="password">Password</label>
+        <input id="password" type="password" autocomplete="current-password" placeholder="Enter your password" required />
+        <p id="loginError" class="error-text" role="alert"></p>
+        <button class="btn primary full" type="submit">Login</button>
+      </form>
+      <small>Demo access: any username and password</small>
+    </section>
+  </div>
+
+  <div id="appView" class="app-shell hidden">
+    <aside class="sidebar">
+      <div class="sidebar-brand"><div class="brand-mark small">RJ</div><strong>RedJr Builders and<br>Construction Supply</strong></div>
+      <nav id="mainNav" aria-label="Main navigation">
+        <button class="nav-link active" data-page="dashboard"><span>▦</span> Dashboard</button>
+        <button class="nav-link" data-page="products"><span>▧</span> Products / POS</button>
+        <button class="nav-link" data-page="orders"><span>▤</span> Orders</button>
+        <button class="nav-link" data-page="inventory"><span>▥</span> Inventory</button>
+        <button class="nav-link" data-page="reports"><span>▨</span> Reports</button>
+        <button class="nav-link" data-page="history"><span>◷</span> History</button>
+      </nav>
+      <button id="logoutBtn" class="nav-link logout"><span>⇥</span> Log out</button>
+    </aside>
+    <main class="main-area">
+      <header class="topbar">
+        <div><p class="eyebrow">REDJR BUILDERS AND CONSTRUCTION SUPPLY</p><h1 id="pageTitle">Dashboard</h1></div>
+        <div class="user-chip"><span class="avatar">●</span><span id="userLabel">Admin</span></div>
+      </header>
+      <div id="pageContent" class="page-content"></div>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
